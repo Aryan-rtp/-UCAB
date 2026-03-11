@@ -322,3 +322,5 @@ Already configured via `MONGO_URI`. Ensure network access allows your deployment
 - **Pagination**: All list endpoints support `page` and `limit` query params
 - **Selective population**: Only required fields are populated from references
 - **Connection pooling**: Mongoose configured with `maxPoolSize: 10`
+
+Changed by Aryan
