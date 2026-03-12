@@ -24,6 +24,7 @@ dotenv.config();
 // Initialize Express app
 const app = express();
 const server = http.createServer(app);
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Socket.io setup with CORS
 const io = new Server(server, {
@@ -85,6 +86,14 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log(`Socket disconnected: ${socket.id}`);
   });
+});
+
+
+
+
+
+app.get("*name", (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 // ─── Error Handler (must be after routes) ────────────────────────────
