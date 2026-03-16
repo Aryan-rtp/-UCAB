@@ -18,7 +18,7 @@ const path = require('path');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
-
+const path = require('path');
 // Load environment variables
 dotenv.config();
 
